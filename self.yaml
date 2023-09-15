@@ -1,0 +1,6 @@
+proxy-groups:
+  -
+    name: 🌹ChatGPT
+    type: select
+rules:
+  - DOMAIN-SUFFIX,openai.com,🌹ChatGPT
