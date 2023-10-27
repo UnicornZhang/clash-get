@@ -4,6 +4,3 @@ proxy-groups:
     type: select
 rules:
   - DOMAIN-SUFFIX,openai.com,🌹ChatGPT
-  - DOMAIN-SUFFIX,xjjj.co,DIRECT
-  - DOMAIN-SUFFIX,tinman.cn,DIRECT
-  - DOMAIN-SUFFIX,jojo.kids,DIRECT
