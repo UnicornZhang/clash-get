@@ -2,7 +2,6 @@ const Koa = require("koa");
 const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
-const rimraf = require("rimraf");
 const YAML = require("yaml");
 
 const app = new Koa();
@@ -21,6 +20,9 @@ app.use(async (ctx, next) => {
     const self = YAML.parse(
       fs.readFileSync(path.join(__dirname, "self.yaml"), "utf8")
     );
+
+    const envRules = JSON.parse(process.env.SELF_RULES);
+
     const proxiesNames = jichang.proxies.map((item) => item.name);
     self["proxy-groups"] = self["proxy-groups"].map((item) => ({
       ...item,
@@ -29,7 +31,7 @@ app.use(async (ctx, next) => {
     jichang["proxy-groups"] = jichang["proxy-groups"].concat(
       self["proxy-groups"]
     );
-    jichang.rules = self.rules.concat(jichang.rules);
+    jichang.rules = self.rules.concat(envRules).concat(jichang.rules);
     ctx.body = YAML.stringify(jichang);
     ctx.attachment("custom-config.yaml"); // 设置下载的文件名
     ctx.type = "application/x-yaml";
