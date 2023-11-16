@@ -4,3 +4,5 @@ proxy-groups:
     type: select
 rules:
   - DOMAIN-SUFFIX,openai.com,🌹ChatGPT
+  - DOMAIN-SUFFIX,oaistatic.com,🌹ChatGPT
+  - DOMAIN-SUFFIX,oaiusercontent.com.com,🌹ChatGPT
