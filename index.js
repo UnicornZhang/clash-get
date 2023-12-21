@@ -24,7 +24,7 @@ app.use(async (ctx, next) => {
     const envRules = JSON.parse(process.env.SELF_RULES);
     const envProxyGroups = JSON.parse(process.env.SELF_PROXY_GROUP);
 
-    const proxiesNames = jichang.proxies.map((item) => item.name);
+    const proxiesNames = jichang.proxies.map((item) => item.name).concat(["DIRECT"]);
     self["proxy-groups"] = self["proxy-groups"].concat(envProxyGroups).map((item) => ({
       ...item,
       proxies: proxiesNames,
