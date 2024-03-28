@@ -6,4 +6,4 @@ rules:
   - DOMAIN-SUFFIX,openai.com,🌹ChatGPT
   - DOMAIN-SUFFIX,oaistatic.com,🌹ChatGPT
   - DOMAIN-SUFFIX,oaiusercontent.com.com,🌹ChatGPT
-  - IP-CIDR,10.130.100.5,DIRECT,no-resolve
+  - IP-CIDR,10.130.100.0/22,DIRECT,no-resolve
