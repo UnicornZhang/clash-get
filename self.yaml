@@ -7,4 +7,5 @@ rules:
   - DOMAIN-SUFFIX,oaistatic.com,🌹ChatGPT
   - DOMAIN-SUFFIX,chatgpt.com,🌹ChatGPT
   - DOMAIN-SUFFIX,oaiusercontent.com.com,🌹ChatGPT
+  - DOMAIN-SUFFIX,micu.hk,DIRECT
   - IP-CIDR,10.130.100.0/22,DIRECT,no-resolve
